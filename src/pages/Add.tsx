@@ -21,7 +21,7 @@ const Add = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "https://bilends-bookstore-backend-production.up.railway.app//books",
+        "https://bilends-bookstore-backend-production.up.railway.app/books",
         book
       );
       console.log("res", res);

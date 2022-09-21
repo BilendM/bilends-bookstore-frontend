@@ -12,7 +12,7 @@ const Books = () => {
   const getBooks = async () => {
     try {
       const res = await axios.get(
-        "https://bilends-bookstore-backend-production.up.railway.app//books"
+        "https://bilends-bookstore-backend-production.up.railway.app/books"
       );
       const { data } = res;
       setBooks(data);
@@ -24,7 +24,7 @@ const Books = () => {
   const handleDelete = async (id: number) => {
     try {
       await axios.delete(
-        `https://bilends-bookstore-backend-production.up.railway.app//books/${id}`
+        `https://bilends-bookstore-backend-production.up.railway.app/books/${id}`
       );
       getBooks();
     } catch (error) {
