@@ -20,7 +20,10 @@ const Add = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8800/books", book);
+      const res = await axios.post(
+        "https://bilends-bookstore-backend-production.up.railway.app//books",
+        book
+      );
       console.log("res", res);
       navigate("/");
     } catch (error) {

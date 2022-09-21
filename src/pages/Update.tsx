@@ -22,7 +22,9 @@ const Update = () => {
     console.log("Get Boook");
 
     try {
-      const res = await axios.get(`http://localhost:8800/books/${id}`);
+      const res = await axios.get(
+        `https://bilends-bookstore-backend-production.up.railway.app//books/${id}`
+      );
       const { data } = res;
       console.log("data", data);
       setBook((prev) => ({ ...prev, ...data }));
@@ -38,7 +40,10 @@ const Update = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`http://localhost:8800/books/${id}`, book);
+      const res = await axios.put(
+        `https://bilends-bookstore-backend-production.up.railway.app//books/${id}`,
+        book
+      );
       console.log("res", res);
       navigate("/");
     } catch (error) {

@@ -11,7 +11,9 @@ const Books = () => {
 
   const getBooks = async () => {
     try {
-      const res = await axios.get("http://localhost:8800/books");
+      const res = await axios.get(
+        "https://bilends-bookstore-backend-production.up.railway.app//books"
+      );
       const { data } = res;
       setBooks(data);
     } catch (error) {
@@ -21,7 +23,9 @@ const Books = () => {
 
   const handleDelete = async (id: number) => {
     try {
-      await axios.delete(`http://localhost:8800/books/${id}`);
+      await axios.delete(
+        `https://bilends-bookstore-backend-production.up.railway.app//books/${id}`
+      );
       getBooks();
     } catch (error) {
       console.log("error :>> ", error);
